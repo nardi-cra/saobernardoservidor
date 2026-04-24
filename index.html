@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Servidor - São Bernardo do Campo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-pref">
+            <img src="logo-prefeitura.png" alt="Prefeitura de São Bernardo do Campo">
+        </div>
+        <div class="header-title">
+            <h1>Município de São Bernardo do Campo</h1>
+            <h2>PORTAL DO SERVIDOR</h2>
+            <p class="subtitle">Acesso ao Portal do Servidor</p>
+        </div>
+        <div class="date-box">
+			<span id="data-atual">Carregando...</span>
+		</div>
+    </header>
+
+    <main class="login-container">
+        <div class="login-card">
+            <div class="coat-of-arms">
+                <img src="brasao.png" alt="Brasão">
+            </div>
+            
+            <form class="login-form">
+                <div class="input-group">
+                    <label for="matricula">Matrícula (sem o dígito)</label>
+                    <input type="text" id="matricula" name="matricula">
+                </div>
+
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha">
+                </div>
+
+             				<button type="button" class="btn-entrar" onclick="fazerLogin()">Entrar</button>
+                
+                <a href="#" class="forgot-password">Esqueci minha senha</a>
+            </form>
+        </div>
+    </main>
+
+    <div class="help-button">?</div>
+	<script>
+	
+    // Função da data que já fizemos
+    function atualizarData() {
+        const spanData = document.getElementById('data-atual');
+        const agora = new Date();
+        const dataFormatada = agora.toLocaleDateString('pt-BR');
+        spanData.innerHTML = `📅 ${dataFormatada}`;
+    }
+
+    // NOVA FUNÇÃO: Redirecionamento simples
+    function fazerLogin() {
+        // Substitua 'home.html' pelo nome da página para onde o usuário deve ir
+        window.location.href = "home.html";
+    }
+
+    window.onload = atualizarData;
+	</script>
+</body>
+</html>

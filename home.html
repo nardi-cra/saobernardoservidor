@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Servidor - Menu de Serviços</title>
+    <link rel="stylesheet" href="style-home.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-pref">
+            <img src="logo-prefeitura.png" alt="SBC">
+        </div>
+        <div class="header-title">
+            <h1>Município de São Bernardo do Campo</h1>
+            <h2>PORTAL DO SERVIDOR</h2>
+            <p class="subtitle-menu">MENU DE SERVIÇOS</p>
+        </div>
+        <div class="header-right">
+            <div class="info-box">
+                <span id="data-atual">📅 21/04/2026</span>
+                <div class="user-info">
+                    👤 42118
+                </div>
+            </div>
+            <a href="index.html" class="btn-sair">
+                <div class="exit-icon">➔</div>
+                <span>Sair</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="user-bar">
+        MATRÍCULA <strong>42.118</strong> LORETTA NARDI CRAUFORD
+    </div>
+
+    <main class="menu-grid">
+        <section class="menu-column">
+            <h3>Atualizações</h3>
+            <button>ALTERAÇÃO DE SENHA</button>
+            <button>REGISTRO/ALTERAÇÃO DE EMAIL</button>
+            <button>SUSPENDE/ATIVA EMISSÃO HOLLERITH</button>
+            <div class="spacer"></div>
+            <button>DECLARAÇÃO ANUAL DE BENS E VALORES</button>
+            <button>ATUALIZAÇÃO CADASTRAL</button>
+            <button class="disabled">AVALIAÇÃO PROGRESSÃO HORIZONTAL</button>
+        </section>
+
+        <section class="menu-column">
+            <h3>Consultas</h3>
+            <button>ABONO DE FALTAS</button>
+            <button>BANCO DE HORAS</button>
+            <button>CRONOGRAMA DE PAGAMENTO</button>
+            <button>DEPENDENTES</button>
+            <button>ENDEREÇO</button>
+            <button>FREQUÊNCIA</button>
+            <button>LICENÇA PRÊMIO</button>
+            <button>DIAS DA JUSTIÇA ELEITORAL</button>
+            <button>PTS-PRÊMIO POR TEMPO DE SERVIÇO</button>
+            <button>PERCENTUAL DE SENIORIDADE</button>
+            <button>VANTAGEM PESSOAL</button>
+            <button class="disabled">PROMOÇÃO MAGISTÉRIO - RETROATIVO</button>
+            <button class="disabled">AVALIAÇÃO PROG. HORIZONT. FINALIZADA</button>
+            <button>ESCOLARIDADE E TÍTULOS</button>
+            <button class="btn-special">SENHA PARA CONSIGNADO (eConsig)</button>
+        </section>
+
+        <section class="menu-column">
+            <h3>Formulários</h3>
+            <button>ESTÁGIO PROBATÓRIO</button>
+            <button>EXTRATO SBPREV</button>
+            <button>INFORME DE RENDIMENTOS</button>
+            <button onclick="window.location.href='recibo.html'">RECIBO DE PAGAMENTOS</button>
+            <button>RECADASTRAMENTO / PROVA DE VIDA</button>
+            <button>EXTRATO SBPREV - RETROATIVO</button>
+        </section>
+    </main>
+
+    <div class="help-button">?</div>
+
+    <script>
+        // Mantendo a data atualizada pelo dispositivo
+        document.getElementById('data-atual').innerHTML = "📅 " + new Date().toLocaleDateString('pt-BR');
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta Recibo de Pagamento - SBC</title>
+    <link rel="stylesheet" href="style-recibo-print.css">
+	
+<header class="main-header">
+    <div class="logo-pref">
+        <img src="logo-prefeitura.png" alt="SBC">
+    </div>
+    
+    <div class="header-title">
+        <h1>Município de São Bernardo do Campo</h1>
+        <h2>PORTAL DO SERVIDOR</h2>
+        <p class="subtitle-red">Consulta Recibo de Pagamento</p>
+    </div>
+
+    <div class="header-right-group">
+    <div class="user-data-box">
+        <div class="data-item">
+            <span class="icon">📅</span>
+            <span id="data-dispositivo">21/04/2026</span>
+        </div>
+        <div class="data-item">
+            <span class="icon">👤</span>
+            <span>42118</span>
+        </div>
+    </div>
+
+    <a href="index.html" class="btn-exit">
+        <div class="exit-circle">➔</div>
+        <span class="exit-text">Sair</span>
+    </a>
+</div>
+</header>
+
+    <main class="content-wrapper">
+        <p class="instruction">Preencha a Solicitação</p>
+		
+        <form class="filter-form">
+            <div class="form-row">
+                <label>LANÇAMENTO</label>
+                <select id="lancamento">
+                    <option value="">Escolha o Lançamento</option>
+                    <option value="MENSAL">MENSAL</option>
+                    <option value="ADIANTAMENTO">ADIANTAMENTO</option>
+                    <option value="FERIAS">FÉRIAS</option>
+                    <option value="FERIAS_MAGISTERIO">FÉRIAS MAGISTÉRIO</option>
+                    <option value="GRATIFICACAO_NATAL">GRATIFICAÇÃO DE NATAL</option>
+                    <option value="SUPLEMENTAR">SUPLEMENTAR</option>
+                    <option value="RETROATIVO_RRA">RETROATIVO RRA</option>
+                </select>
+            </div>
+			
+<div class="help-icon-blue">?</div>
+
+            <div class="form-row">
+                <label>MÊS</label>
+                <select id="mes">
+                    <option value="">Escolha o Mês</option>
+                    <option value="01">JANEIRO</option>
+                    <option value="02">FEVEREIRO</option>
+                    <option value="03">MARÇO</option>
+                    <option value="04">ABRIL</option>
+                    <option value="05">MAIO</option>
+                    <option value="06">JUNHO</option>
+                    <option value="07">JULHO</option>
+                    <option value="08">AGOSTO</option>
+                    <option value="09">SETEMBRO</option>
+                    <option value="10">OUTUBRO</option>
+                    <option value="11">NOVEMBRO</option>
+                    <option value="12">DEZEMBRO</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label>ANO</label>
+                <input type="text" id="ano" value="0000" maxlength="4">
+            </div>
+
+            <div class="button-group">
+                <button type="button" class="btn-action" onclick="window.location.href='visualizar_recibo.html'">Enviar</button>
+                <button type="button" class="btn-action" onclick="window.location.href='home.html'">Voltar</button>
+            </div>
+        </form>
+
+        <p class="footer-note">Para melhor qualidade de impressão consulte Ajuda desta Página.</p>
+    </main>
+
+    <script>
+        document.getElementById('data-dispositivo').innerText = new Date().toLocaleDateString('pt-BR');
+    </script>
+</body>
+</html>

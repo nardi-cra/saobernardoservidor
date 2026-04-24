@@ -1,0 +1,120 @@
+/* Configurações Gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6; /* Cinza claro do fundo */
+    color: #333;
+}
+
+/* Cabeçalho */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-title {
+    text-align: center;
+}
+
+.header-title h1 { font-size: 1.2rem; margin: 0; }
+.header-title h2 { font-size: 1.5rem; margin: 5px 0; font-weight: bold; }
+.header-title .subtitle { color: red; font-size: 0.9rem; margin: 0; font-weight: bold; }
+
+.date-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+/* Cartão de Login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Centraliza verticalmente */
+}
+
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Espaço entre o brasão e o formulário */
+    width: 600px;
+}
+
+.coat-of-arms img {
+    width: 200px;
+}
+
+/* Formulário */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.btn-entrar {
+    background-color: #0099ff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.btn-entrar:hover {
+    background-color: #007acc;
+}
+
+.forgot-password {
+    font-size: 0.8rem;
+    color: #666;
+    text-decoration: italic;
+    font-style: italic;
+}
+
+/* Botão Flutuante de Ajuda */
+.help-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}

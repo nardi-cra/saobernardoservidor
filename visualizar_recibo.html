@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Holerite Oficial - SBC</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body { 
+            font-family: Arial, Helvetica, sans-serif; 
+            background-color: #d1d1d1; 
+            display: flex; 
+            justify-content: center; 
+            padding: 20px;
+        }
+
+        .holerite-externo {
+            width: 850px;
+            background-color: white;
+            padding: 8px;
+            border: 1px solid #666;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Estrutura de Linhas */
+        .linha { 
+            display: flex; 
+            gap: 2px; 
+            margin-bottom: 2px; 
+            width: 100%; 
+        }
+
+        /* Estilo das Caixas de Informação */
+        .caixa {
+            border: 1px solid #888;
+            display: flex;
+            flex-direction: column;
+            padding: 2px 5px;
+            min-height: 38px;
+            background: #fff;
+        }
+
+        .label {
+            font-size: 10px;
+            text-transform: uppercase;
+            text-align: center;
+            display: block;
+            margin-bottom: 2px;
+            color: #333;
+        }
+
+        .valor-texto {
+            font-size: 12px;
+            text-align: center;
+            font-weight: normal;
+            display: block;
+        }
+
+        /* Tabela de Discriminação (Efeito de caixas separadas) */
+        .secao-tabela {
+            margin: 10px 0;
+            border: 2px solid #555;
+            padding: 2px;
+        }
+
+        .header-tabela {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 3px;
+        }
+
+        .celula-header {
+            background-color: #ccc;
+            border: 1px solid #444;
+            padding: 4px;
+            font-weight: bold;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .item-tabela {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 2px;
+        }
+
+        .celula {
+            border: 1px solid #888;
+            padding: 3px 6px;
+            font-size: 11px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Larguras das colunas da tabela */
+        .col-desc { flex: 4; }
+        .col-vazio { width: 40px; justify-content: center; }
+        .col-vlr { width: 160px; justify-content: flex-end; }
+        .col-tot { width: 160px; justify-content: flex-end; font-weight: bold; }
+
+        /* Utilitários */
+        .cinza { background-color: #e0e0e0; }
+        .flex-1 { flex: 1; }
+        .flex-2 { flex: 2; }
+        .flex-3 { flex: 3; }
+        .flex-4 { flex: 4; }
+        .titulo-prefeitura {
+            font-size: 18px;
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+        }
+
+        .secao-titulo-meio {
+            text-align: center;
+            font-size: 11px;
+            border: 1px solid #888;
+            margin: 5px 0;
+            padding: 2px;
+        }
+
+        .destaque-valor { font-weight: bold; font-size: 14px; }
+
+    </style>
+</head>
+<body>
+
+<div class="holerite-externo">
+    <div class="linha">
+        <div class="caixa cinza flex-4 titulo-prefeitura">MUNICIPIO DE SAO BERNARDO DO CAMPO</div>
+        <div class="caixa flex-1"><span class="label">COMPETÊNCIA</span><span class="valor-texto">ABRIL/2026</span></div>
+    </div>
+
+    <div class="linha">
+        <div class="caixa flex-1"><span class="label">PAGAMENTO</span><span class="valor-texto">MENSAL</span></div>
+        <div class="caixa flex-2"><span class="label">FOLHA</span><span class="valor-texto">ESTATUTÁRIOS</span></div>
+        <div class="caixa flex-1"><span class="label">D.E.E.</span><span class="valor-texto">3.506</span></div>
+    </div>
+
+    <div class="linha">
+        <div class="caixa flex-1"><span class="label">MATRÍCULA</span><span class="valor-texto">042118-0</span></div>
+        <div class="caixa flex-4"><span class="label">NOME</span><span class="valor-texto">LORETTA NARDI CRAUFORD</span></div>
+        <div class="caixa flex-1"><span class="label">UNIDADE</span><span class="valor-texto">SE-112</span></div>
+    </div>
+
+    <div class="linha">
+        <div class="caixa flex-3"><span class="label">CARGO EFETIVO</span><span class="valor-texto">PROF I ED BAS</span></div>
+        <div class="caixa flex-1"><span class="label">REFERÊNCIA</span><span class="valor-texto">E4 C</span></div>
+        <div class="caixa flex-2"><span class="label">VANTAGEM PESSOAL</span><span class="valor-texto"></span></div>
+    </div>
+
+    <div class="linha">
+        <div class="caixa flex-3"><span class="label">CARGO EM COMISSÃO</span><span class="valor-texto"></span></div>
+        <div class="caixa flex-1"><span class="label">REFERÊNCIA</span><span class="valor-texto"></span></div>
+        <div class="caixa flex-2"><span class="label">SENHORIDADE %</span><span class="valor-texto">8,24</span></div>
+    </div>
+
+    <div class="linha">
+        <div class="caixa flex-3"><span class="label">BANCO</span><span class="valor-texto">SANTANDER 00060 CENTRO</span></div>
+        <div class="caixa flex-1"><span class="label">CONTA BANCÁRIA</span><span class="valor-texto">71.050764.1</span></div>
+        <div class="caixa flex-1 cinza"><span class="label">VALOR BASE PARA PAGAMENTO</span><span class="valor-texto">7.136,43</span></div>
+    </div>
+
+    <div class="secao-tabela">
+        <div class="header-tabela">
+            <div class="celula-header col-desc">DISCRIMINAÇÃO</div>
+            <div class="celula-header col-vazio"></div>
+            <div class="celula-header col-vazio"></div>
+            <div class="celula-header col-vlr">VALOR</div>
+            <div class="celula-header col-tot">TOTAL</div>
+        </div>
+
+        <div class="item-tabela">
+            <div class="celula col-desc">VENCIMENTOS</div>
+            <div class="celula col-vazio"></div>
+            <div class="celula col-vazio"></div>
+            <div class="celula col-vlr">7.136,43</div>
+            <div class="celula col-tot"></div>
+        </div>
+
+        <div class="item-tabela">
+            <div class="celula col-desc">SENHORIDADE</div>
+            <div class="celula col-vazio">0008</div>
+            <div class="celula col-vazio"></div>
+            <div class="celula col-vlr">588,04</div>
+            <div class="celula col-tot">7.724,47</div>
+        </div>
+
+        <div class="item-tabela">
+            <div class="celula col-desc">IMPOSTO DE RENDA</div>
+            <div class="celula col-vazio"></div>
+            <div class="celula col-vazio"></div>
+            <div class="celula col-vlr">918,11</div>
+            <div class="celula col-tot"></div>
+        </div>
+
+        <div class="item-tabela">
+            <div class="celula col-desc">ADIANTAMENTO</div>
+            <div class="celula col-vazio"></div>
+            <div class="celula col-vazio"></div>
+            <div class="celula col-vlr">2.140,92</div>
+            <div class="celula col-tot"></div>
+        </div>
+
+        <div class="item-tabela">
+            <div class="celula col-desc">ADIANTAMENTO SENHORIDADE</div>
+            <div class="celula col-vazio"></div>
+            <div class="celula col-vazio"></div>
+            <div class="celula col-vlr">178,41</div>
+            <div class="celula col-tot"></div>
+        </div>
+
+        <div class="item-tabela">
+            <div class="celula col-desc">SBCPREV-INSTITUTO PREV MUNIC</div>
+            <div class="celula col-vazio"></div>
+            <div class="celula col-vazio"></div>
+            <div class="celula col-vlr">1.081,43</div>
+            <div class="celula col-tot"></div>
+        </div>
+
+        <div class="item-tabela">
+            <div class="celula col-desc">PLANO ODONTOLOGICO</div>
+            <div class="celula col-vazio"></div>
+            <div class="celula col-vazio"></div>
+            <div class="celula col-vlr">15,49</div>
+            <div class="celula col-tot"></div>
+        </div>
+
+        <div class="item-tabela">
+            <div class="celula col-desc">PLANO DE SAUDE ESPECIAL</div>
+            <div class="celula col-vazio"></div>
+            <div class="celula col-vazio"></div>
+            <div class="celula col-vlr">230,84</div>
+            <div class="celula col-tot">4.563,20</div>
+        </div>
+    </div>
+
+    <div class="secao-titulo-meio">AUXÍLIO TRANSPORTE</div>
+    <div class="linha">
+        <div class="caixa flex-1"><span class="label">VALOR BASE</span><span class="valor-texto">261,80</span></div>
+        <div class="caixa flex-1"><span class="label">VALOR MENSAL</span><span class="valor-texto"></span></div>
+        <div class="caixa flex-1"><span class="label">CONTR. 6% REMUN.</span><span class="valor-texto"></span></div>
+        <div class="caixa flex-1"><span class="label">DIFER.ANTEC.</span><span class="valor-texto"></span></div>
+        <div class="caixa flex-1"><span class="label">VLR. A RECEBER</span><span class="valor-texto"></span></div>
+    </div>
+
+    <div class="linha" style="margin-top: 8px;">
+        <div class="caixa flex-1"><span class="label">VALOR BASE SBCPREV</span><span class="valor-texto">7.724,47</span></div>
+        <div class="caixa flex-1"><span class="label">AUX.ALIMENTAÇÃO</span><span class="valor-texto">605,00</span></div>
+        <div class="caixa flex-1"><span class="label">CONTR.FUNC.</span><span class="valor-texto"></span></div>
+        <div class="caixa flex-1"><span class="label">%</span><span class="valor-texto"></span></div>
+        <div class="caixa flex-1 cinza"><span class="label">VALOR LÍQUIDO</span><span class="valor-texto">605,00</span></div>
+    </div>
+
+    <div class="linha">
+        <div class="caixa flex-1"><span class="label">RECOLHER FGTS</span><span class="valor-texto"></span></div>
+        <div class="caixa flex-1 cinza"><span class="label">LÍQUIDO</span><span class="valor-texto destaque-valor">3.161,27</span></div>
+        <div class="caixa flex-1"><span class="label">R.ANT.</span><span class="valor-texto"></span></div>
+        <div class="caixa flex-1"><span class="label">SAL.FAM.</span><span class="valor-texto"></span></div>
+        <div class="caixa flex-1"><span class="label">R.MÊS</span><span class="valor-texto"></span></div>
+        <div class="caixa flex-1 cinza"><span class="label">LIQ. A RECEBER</span><span class="valor-texto destaque-valor">3.766,27</span></div>
+    </div>
+
+    <div class="linha" style="height: 20px; border: 1px solid #888; margin-top: 5px;"></div>
+</div>
+
+</body>
+</html>

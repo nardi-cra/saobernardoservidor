@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace; /* Fonte que remete a sistemas antigos */
+    background-color: #fff;
+}
+
+/* Header similar ao anterior mas com ajustes */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    border-bottom: 1px solid #ccc;
+    background: #f8f8f8;
+}
+
+.header-title h1 { font-size: 1.1rem; margin: 0; }
+.header-title h2 { font-size: 1.3rem; margin: 2px 0; }
+.subtitle-menu { color: red; font-weight: bold; margin: 0; text-align: center; font-size: 0.9rem;}
+
+.header-right { display: flex; align-items: center; gap: 15px; }
+.info-box { border: 1px solid #999; padding: 5px; font-size: 0.8rem; border-radius: 4px; }
+.btn-sair { text-decoration: none; color: red; text-align: center; font-weight: bold; font-size: 0.8rem; }
+.exit-icon { font-size: 1.5rem; }
+
+/* Barra de Identificação do Usuário */
+.user-bar {
+    background-color: #fff;
+    padding: 10px 100px;
+    font-size: 0.85rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* Grid de Menus */
+.menu-grid {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 50px;
+    gap: 20px;
+}
+
+.menu-column {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    border-right: 1px solid #eee; /* Linha divisória entre colunas */
+    padding-right: 20px;
+}
+
+.menu-column h3 {
+    font-size: 0.9rem;
+    color: #666;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+/* Estilo dos Botões */
+button {
+    background-color: #e0e0e0;
+    border: 1px solid #333;
+    margin-bottom: 4px;
+    padding: 5px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #d0d0d0;
+}
+
+/* Botões desabilitados (cinza claro no print) */
+.disabled {
+    background-color: #f0f0f0;
+    color: #999;
+    border: 1px solid #ccc;
+    cursor: default;
+}
+
+/* Botão especial em vermelho no rodapé da coluna */
+.btn-special {
+    margin-top: 20px;
+    border-color: red;
+    color: red;
+    background-color: #fff;
+}
+
+.spacer { height: 30px; }
+
+.help-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
